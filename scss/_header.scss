@@ -1,0 +1,59 @@
+.header {
+  width: 100vw;
+  height: 40vh;
+  background-image: url('../assets/images/GPTERM_Header-Background-Small.png');
+  background-repeat: no-repeat;
+  position: relative;
+}
+.header__btn {
+  border: 1px solid $mainOrange;
+  font-family: $Lato;
+  letter-spacing: 1.15px;
+  font-size: 0.9rem;
+  background-color: $mainDarkBg;
+  padding: 15px 20px;
+  color: #f1e8d1;
+}
+.header__readMoreBtn {
+  display: none;
+}
+.header__mainHeader {
+  display: none;
+}
+.header__contactBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.header__logoLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.header__logoContainer {
+  width: 25vw;
+  height: 25vw;
+
+  position: absolute;
+  top: 2px;
+  left: 15vw;
+
+  border: 1px solid $mainOrange;
+  background-color: $mainDarkBg;
+}
+.header__logo {
+  width: 80%;
+  height: 80%;
+}

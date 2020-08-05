@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@200;300;400;700&family=Oswald:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/main.min.css" />
   </head>
   <body>
@@ -28,8 +33,24 @@
           <a href="#" class="navigation__link">Kontakt</a>
         </li>
       </ul>
+      <button class="navigation__hamburgerBtn"><div></div></button>
     </nav>
-    <header class="header"></header>
+
+    <header class="header">
+      <div class="header__logoContainer">
+        <a href="#" class="header__logoLink"
+          ><img
+            src="/assets/images/logoGP.png"
+            alt="GP-Term"
+            class="header__logo"
+        /></a>
+      </div>
+      <h1 class="header__mainHeader">Termomodernizacja</h1>
+      <button class="header__contactBtn header__btn">Kontakt</button>
+      <button class="header__readMoreBtn header__btn">
+        Dowiedz się więcej...
+      </button>
+    </header>
     <script src="main.js"></script>
   </body>
 </html>
