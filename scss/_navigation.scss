@@ -1,11 +1,20 @@
 .navigation {
   z-index: 98;
   position: fixed;
-  top: -100vh;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: #222222;
+
+  &--active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  opacity: 0.3;
+  transition: transform ease 0.2s, opacity ease 0.2s;
+
+  transform: translateY(-100vh);
 }
 .navigation__list {
   height: 100%;
@@ -56,6 +65,7 @@
 .navigation__hamburgerBtn--active {
   &:before {
     background-color: $mainOrange;
+    box-shadow: 0 0 0 transparent;
     transform: translateY(12px) rotate(135deg);
     -webkit-transform: translateY(12px) rotate(135deg);
     -moz-transform: translateY(12px) rotate(135deg);
@@ -65,19 +75,26 @@
 
   &:after {
     background-color: $mainOrange;
-    transform: translateY(-12px) rotate(-135deg);
-    -webkit-transform: translateY(-12px) rotate(-135deg);
-    -moz-transform: translateY(-12px) rotate(-135deg);
-    -ms-transform: translateY(-12px) rotate(-135deg);
-    -o-transform: translateY(-12px) rotate(-135deg);
+    box-shadow: 0 0 0 transparent;
+    transform: translateY(-10px) rotate(-135deg);
+    -webkit-transform: translateY(-10px) rotate(-135deg);
+    -moz-transform: translateY(-10px) rotate(-135deg);
+    -ms-transform: translateY(-10px) rotate(-135deg);
+    -o-transform: translateY(-10px) rotate(-135deg);
   }
 
   & div {
     background-color: $mainOrange;
+    box-shadow: 0 0 0 transparent;
     transform: scale(0);
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
+  }
+}
+@media (orientation: landscape) {
+  .navigation__hamburgerBtn {
+    width: 9vh;
   }
 }
