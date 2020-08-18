@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@200;300;400;500;700&family=Oswald:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
@@ -15,7 +19,7 @@
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__listItem">
-          <a href="#" class="navigation__link">O nas</a>
+          <a href="#aboutUs" class="navigation__link">O nas</a>
         </li>
         <li class="navigation__listItem">
           <a href="#" class="navigation__link">Oferta</a>
@@ -46,15 +50,15 @@
         /></a>
       </div>
       <h1 class="header__mainHeader">Termomodernizacja</h1>
-      <button class="header__contactBtn header__btn">Kontakt</button>
-      <button class="header__readMoreBtn header__btn">
+      <a href="#" class="header__contactBtn header__btn">Kontakt</a>
+      <a href="#" class="header__readMoreBtn header__btn">
         Dowiedz się więcej...
-      </button>
+      </a>
     </header>
     <main class="main">
-      <section class="aboutUs">
+      <section class="aboutUs" id="#aboutUs">
         <div class="aboutUs__container">
-          <h2 class="aboutUs__header">O nas</h2>
+          <h2 class="aboutUs__header" data-id="1">O nas</h2>
           <p class="aboutUs__text">
             Jesteśmy firmą budowlaną realizującą zadania w ramach zamówień
             publicznych, a także prace dla klientów indywidualnych i
@@ -68,7 +72,7 @@
           </p>
         </div>
         <div class="aboutUs__container">
-          <h2 class="aboutUs__header">Historia</h2>
+          <h2 class="aboutUs__header" data-id="2">Historia</h2>
           <p class="aboutUs__text">
             Przedsiębiorstwo Produkcyjno-usługowe GP-TERM powstało i działa na
             rynku budowlanym od 1993 roku. Siedziba spółki zlokalizowana jest w
@@ -76,6 +80,130 @@
             wykwalifikowana, zaangażowana, kreatywna kadra pracownicza stale
             podnosząca swoje umiejętności zawodowe.
           </p>
+        </div>
+      </section>
+      <section class="offer">
+        <h2 class="offer__header">Usługi</h2>
+        <div class="offer__headerBox offer__headerBox--box1" data-id="1">
+          <img class="offer__icon" src="./assets/icons/construct.svg" alt="" />
+          <h3 class="offer__insideHeader">Budowa</h3>
+        </div>
+        <div class="offer__text offer__text--text1" data-id="1">
+          <div class="offer__innerWrapper" data-id="1">
+            <p>
+              Współpracujemy ściśle z wykonawcami różnych branż, co uwalnia
+              naszych klientów od wielokrotnych i czasochłonnych uzgodnień z
+              innymi firmami wyspecjalizowanymi w jednej tylko dziedzinie.
+              Dysponujemy bazą sprzętową i transportową, jak również
+              wykwalifikowaną kadrę techniczną, uprawnioną do prowadzenia robót
+              budowlanych (również na obiektach zabytkowych).
+            </p>
+            <p>
+              W czym się specjalizujemy? Generalne wykonawstwo wszelkich robót
+              ogólnobudowlanych: – stanu surowego: fundamenty, ściany, stropy,
+              dachy – stanu wykończeniowego: tynki, malowanie, docieplenia
+              elewacji zewnętrznych, układanie glazury i terakoty, roboty
+              instalacyjne wod-kan, c.o., roboty elektryczne, wentylacje.
+            </p>
+
+            <ul>
+              <li>Budowa od podstaw</li>
+              <li>Remonty i modernizacje</li>
+              <li>Przebudowy</li>
+              <li>Budowa obiektów biurowych i usługowych</li>
+              <li>Budowa obiektów użyteczności publicznej</li>
+              <li>Wycena projektów w oparciu o kosztorys wskaźnikowy</li>
+            </ul>
+            <p>
+              Jesteśmy gotowi do profesjonalnego, solidnego i szybkiego
+              zrealizowania Państwa zamówienia z gwarancją jakości. Zapraszamy
+              do naszej galerii gdzie znajdują się nasze dotychczasowe prace.
+            </p>
+            <p>
+              Przedsiębiorstwo świadczy usługi związane z wykonawstwem elementów
+              ze stali szlachetnej i chromoniklu: Barierki i poręcze schodowe,
+              Mocowania, Daszki. Na życzenie klienta możemy wykonać dowolną
+              konstrukcję ze stali nierdzewnej. Kompleksowo realizujemy
+              zamówienia naszych klientów. Służymy wiedzą i doświadczeniem.
+              Zakres usług obejmuje: doradztwo, wykonanie pomiarów, projekt,
+              wykonanie i montaż.
+            </p>
+          </div>
+          <button class="offer__readMoreBtn" data-id="1">
+            Czytaj więcej <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+        <div class="offer__headerBox offer__headerBox--box2" data-id="2">
+          <img class="offer__icon" src="./assets/icons/bulb.svg" alt="" />
+          <h3 class="offer__insideHeader">Instalacje Elektryczne</h3>
+        </div>
+        <div class="offer__text offer__text--text2">
+          <div class="offer__innerWrapper" data-id="2">
+            <p>
+              Zajmujemy się kompleksowym projektowaniem i wykonawstwem a także
+              konserwacją instalacji elektrycznych. Wykonujemy instalacje
+              elektryczne od małych budynków po duże budynki i biurowce.
+            </p>
+            <p>Wykonujemy:</p>
+            <p>
+              Instalacje w nowo powstających budynkach oraz modernizacja,
+              remonty i konserwacja istniejącej instalacji Instalacje i technika
+              oświetleniowa (tradycyjna instalacja, sterowanie DALI, sterowanie
+              DMX) Instalacje elektryczne dedykowane do zasilania sieci
+              komputerowych Instalacje odgromowe Wykonywanie rozdzielni niskiego
+              napięcia Pomiary elektryczne
+            </p>
+            <p>Zakres wykonywanych przez nas pomiarów obejmuje:</p>
+            <ul>
+              <li>
+                - badanie skuteczności ochrony przeciwporażeniowej przez
+                samoczynne wyłączenie zasilania
+              </li>
+              <li>- badanie wyłączników różnicowoprądowych</li>
+              <li>- badanie stanu rezystancji izolacji</li>
+              <li>- badanie natężenia oświetlenia</li>
+              <li>- badanie urządzeń piorunochronnych</li>
+              <li>- badania i analiza jakości energii miernikiem FLUKE 435</li>
+            </ul>
+            <p>Zajmujemy się również:</p>
+            <ul>
+              <li>systemami kontroli dostępu i rejestracji czasu pracy</li>
+              <li>systemami multimedialnymi sal konferencyjnych</li>
+              <li>instalacjami nagłośnienia</li>
+              <li>instalacjami antenowymi RTV i SAT</li>
+              <li>instalacjami domofonowymi</li>
+              <li>instalacjami przeciwpożarowymi i oddymiania</li>
+            </ul>
+          </div>
+          <button class="offer__readMoreBtn" data-id="2">
+            Czytaj więcej <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+        <div class="offer__headerBox offer__headerBox--box3" data-id="3">
+          <img class="offer__icon" src="./assets/icons/handWash.svg" alt="" />
+          <h3 class="offer__insideHeader">Instalacje Sanitarne</h3>
+        </div>
+        <div class="offer__text offer__text--text3">
+          <div class="offer__innerWrapper" data-id="3">
+            <p>Oferujemy Państwu następujące usługi:</p>
+            <p>
+              Projektowanie i budowa instalacji sanitarnych wewnętrznych
+              (wodociągowych, ciepłej wody użytkowej, przeciwpożarowych,
+              kanalizacyjnych, gazowych, centralnego ogrzewania, wentylacyjnych
+              i klimatyzacyjnych), Do każdego zlecenia podchodzimy
+              indywidualnie, szczegółowo analizując technologię przy pomocy
+              której wykonana zostanie instalacja, przyłącze czy sieć wraz z
+              urządzeniami i obiektami, aby zoptymalizować koszty budowy i
+              przede wszystkim późniejszą eksploatację.
+            </p>
+            <p>
+              Serdecznie zapraszamy do współpracy i skorzystania z naszej wiedzy
+              i doświadczenia...
+            </p>
+          </div>
+          <button class="offer__readMoreBtn" data-id="3">
+            Czytaj więcej<i class="fas fa-angle-down"></i>
+          </button>
         </div>
       </section>
     </main>
