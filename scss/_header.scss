@@ -1,9 +1,10 @@
 .header {
   width: 100vw;
-  height: 40vh;
+  height: 35vh;
   background-image: url('../assets/images/GPTERM_Header-Background-Small.png');
   background-repeat: no-repeat;
   position: relative;
+  background-size: 100% 100%;
 }
 .header__btn {
   border: 1px solid $mainOrange;
@@ -13,6 +14,7 @@
   background-color: $mainDarkBg;
   padding: 15px 20px;
   color: #f1e8d1;
+  text-decoration: none;
 }
 .header__readMoreBtn {
   display: none;
@@ -56,4 +58,131 @@
 .header__logo {
   width: 80%;
   height: 80%;
+}
+@media (orientation: landscape) {
+  .header {
+    height: 80vh;
+
+    position: relative;
+  }
+  .header__logoContainer {
+    height: 25vh;
+    width: 25vh;
+  }
+  .header__mainHeader {
+    display: block;
+    position: absolute;
+    width: 70%;
+    top: 55%;
+    right: 0;
+
+    letter-spacing: 2.3px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: -1px 2px 2px #222;
+
+    color: #fef6e3;
+    font-family: $Montserrat;
+    font-size: 2.6rem;
+    margin-right: 1.5vw;
+    &::after {
+      content: '';
+      display: block;
+
+      background-color: $mainOrange;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 60%;
+      height: 35%;
+    }
+  }
+}
+@media (orientation: portrait) and (min-height: 800px) {
+  .header {
+    height: 30vh;
+  }
+}
+@media (orientation: portrait) and (min-width: 768px) {
+  .header__logoContainer {
+    height: 20vw;
+    width: 20vw;
+  }
+  .header__btn {
+    font-size: 1.4rem;
+    padding: 20px 30px;
+  }
+}
+@media (orientation: portrait) and (min-width: 1024px) {
+  .header__logoContainer {
+    height: 20vw;
+    width: 20vw;
+    left: 10vw;
+  }
+
+  .header__btn {
+    padding: 25px 30px;
+    width: 150px;
+    font-size: 1.8rem;
+  }
+}
+//landscape
+@media (orientation: landscape) and (min-width: 600px) {
+  .header__mainHeader {
+    width: 60%;
+    top: 60%;
+    font-size: 2.8rem;
+
+    &::after {
+      width: 60%;
+      height: 40%;
+    }
+  }
+  .header__btn {
+    font-size: 1.1rem;
+  }
+  .header__contactBtn {
+    bottom: -10px;
+  }
+}
+@media (orientation: landscape) and (min-width: 1024px) {
+  .header {
+    background-image: url('../assets/images/GPTERM_Header-Background-Big.png');
+  }
+  .header__mainHeader {
+    width: 60%;
+    top: 60%;
+    font-size: 4.5rem;
+
+    &::after {
+      width: 60%;
+      height: 40%;
+    }
+  }
+  .header__btn {
+    font-size: 1.6rem;
+  }
+  .header__contactBtn {
+    display: none;
+  }
+  .header__readMoreBtn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -10px;
+    left: 50%;
+    width: 250px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  .header__logoContainer {
+    width: 25vh;
+    height: 25vh;
+
+    left: 10vh;
+  }
 }
