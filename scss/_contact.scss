@@ -1,0 +1,19 @@
+.contact {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.constac__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.contact__innerHeader {
+  color: #ff9900;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: $Oswald;
+  line-height: 28px;
+  letter-spacing: 2.3px;
+}
