@@ -9,7 +9,7 @@
       href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@200;300;400;500;700&family=Oswald:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@200;300;400;500;700&family=Oswald:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -206,7 +206,7 @@
           </button>
         </div>
       </section>
-      <section class="realizations">
+      <!-- <section class="realizations">
         <h2 class="realizations__header offer__header">Realizacje</h2>
         <div class="realizations__wrapper">
           <div class="realizations__realization">
@@ -240,12 +240,12 @@
         </div>
 
         <button class="realizations__displayMore">Zobacz wiecej..</button>
-      </section>
+      </section> -->
       <section class="contact">
         <div class="contact__wrapper">
           <h3 class="contact__innerHeader">Kontakt</h3>
           <article class="contact__contactOptions">
-            <h4 class="contact__formHeader">
+            <h4 class="contact__companyName">
               PPU „GP-TERM” M. Gajek & B. Gajek
             </h4>
             <div class="contact__contactOption">
@@ -255,7 +255,7 @@
               </p>
             </div>
             <div class="contact__contactOption">
-              <i class="fas fa-phone-alt"></i>
+              <i class="fas fa-phone"></i>
               <p class="contact__contactOptionText">602 706 352</p>
             </div>
             <div class="contact__contactOption">
@@ -269,8 +269,8 @@
           </article>
         </div>
         <div class="contact__wrapper">
-          <h4 class="contact__innerHeader">Napisz do nas</h4>
-          <form action="" class="contact__form">
+          <h4 class="contact__innerHeader">Napisz do nas!</h4>
+          <form action="mailto:pgajek94@gmail.com" class="contact__form">
             <div class="contact__formField">
               <label for="name" class="contact__label">Imię i Nazwisko</label>
               <input
@@ -278,7 +278,8 @@
                 id="name"
                 name="name"
                 class="contact__input"
-                placeholder="Imię i Nazwisko"
+                placeholder="Imię i Nazwisko..."
+                required
               />
             </div>
             <div class="contact__formField">
@@ -289,7 +290,8 @@
                 type="text"
                 id="email"
                 class="contact__input"
-                placeholder="adres@email.com"
+                placeholder="adres@email.com..."
+                required
               />
             </div>
             <div class="contact__formField">
@@ -299,7 +301,16 @@
                 name="topic"
                 id="topic"
                 class="contact__input"
-                placeholder="Temat"
+                placeholder="Temat..."
+              />
+            </div>
+            <div class="contact__formField contact__file">
+              <label for="cv" class="contact__label">Dodaj CV:</label>
+              <input
+                type="file"
+                name="cv"
+                id="cv"
+                class="contact__input "
               />
             </div>
             <div class="contact__formField">
@@ -310,6 +321,7 @@
                 cols="30"
                 rows="10"
                 class="contact__textArea"
+                placeholder='Wiadomość...'
               ></textarea>
             </div>
             <button type="submit" class="contact__submitBtn">Wyślij</button>

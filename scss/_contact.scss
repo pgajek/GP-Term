@@ -1,13 +1,18 @@
 .contact {
+  margin-top: 50px;
   z-index: 2;
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 20px;
 }
-.constac__wrapper {
+.contact__wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: $Montserrat;
+  margin-bottom: 20px;
 }
 .contact__innerHeader {
   color: #ff9900;
@@ -16,4 +21,349 @@
   font-family: $Oswald;
   line-height: 28px;
   letter-spacing: 2.3px;
+  text-align: left;
+  width: 100%;
+  text-transform: uppercase;
+}
+.contact__companyName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #e9e1cc;
+}
+.contact__contactOptions {
+  background-color: #263d48;
+  width: 87.5vw;
+  height: 32vh;
+  padding: 5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact__contactOption {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 70%;
+  font-size: 1rem;
+  color: #ff9900;
+
+  &:nth-of-type(odd) {
+    color: #e9e1cc;
+  }
+  i {
+    font-size: 1.5rem;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5vw;
+  }
+
+  &:nth-of-type(2) {
+    i {
+      transform: rotate(90deg);
+      transform-origin: center;
+    }
+  }
+}
+.contact__contactOptionText {
+  letter-spacing: 0.03px;
+}
+.contact__form {
+  background-color: #152a34;
+  padding: 5% 0;
+  width: 87vw;
+  height: 58vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact__formField {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: $Montserrat;
+  font-size: 1rem;
+  color: #e6dec8;
+}
+.contact__label {
+  margin-bottom: 1vh;
+}
+.contact__input {
+  width: 150px;
+  height: 25px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.42);
+  padding: 2px;
+  background-color: #d8d8d8;
+  border: none;
+}
+.contact__file {
+  display: none;
+}
+.contact__textArea {
+  width: 203px;
+  height: 75px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.42);
+  padding: 2px;
+  background-color: #d8d8d8;
+  border: none;
+}
+.contact__submitBtn {
+  font-family: $Lato;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 56px;
+  border-radius: 7px;
+  background-color: #ff9900;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.42);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+// MEDIA PORTRAIT
+@media (orientation: portrait) and (min-width: 375px) {
+  .contact__formField {
+    font-size: 1.1rem;
+  }
+  .contact__input {
+    width: 175px;
+    height: 35px;
+    padding: 5px;
+  }
+  .contact__textArea {
+    width: 230px;
+    height: 100px;
+    padding: 5px;
+  }
+}
+@media (orientation: portrait) and (min-width: 768px) {
+  .contact__innerHeader {
+    margin-left: 7vw;
+    font-size: 3rem;
+    line-height: 5.8rem;
+    letter-spacing: 5.3px;
+  }
+  .contact__companyName {
+    font-size: 2rem;
+    letter-spacing: 0.9px;
+  }
+  .contact__contactOption {
+    font-size: 1.6rem;
+    i {
+      font-size: 2rem;
+      height: 40px;
+      width: 40px;
+    }
+  }
+  .contact__contactOptionText {
+    letter-spacing: 0.1px;
+  }
+  .contact__formField {
+    font-size: 1.6rem;
+  }
+  .contact__input {
+    width: 275px;
+    height: 45px;
+    padding: 5px;
+  }
+  .contact__textArea {
+    width: 430px;
+    height: 200px;
+    padding: 5px;
+  }
+  .contact__submitBtn {
+    font-size: 1.6rem;
+    height: 45px;
+    width: 85px;
+  }
+}
+@media (orientation: portrait) and (min-width: 1024px) {
+  .contact__innerHeader {
+    margin-left: 25vw;
+  }
+
+  .contact__form {
+    width: 70vw;
+  }
+  .contact__contactOptions {
+    width: 70vw;
+  }
+}
+// MEDIA LANDSCAPE
+@media (orientation: landscape) {
+  .contact__innerHeader {
+    margin-left: 15vw;
+  }
+  .contact__contactOptions {
+    height: 60vh;
+    width: 80vw;
+  }
+  .contact__form {
+    width: 80vw;
+    height: 120vh;
+  }
+}
+@media (orientation: landscape) and(min-width: 736px) {
+  .contact__formField {
+    font-size: 1.1rem;
+  }
+  .contact__companyName {
+    font-size: 1.6rem;
+  }
+  .contact__contactOption {
+    font-size: 1.2rem;
+  }
+  .contact__input {
+    width: 175px;
+    height: 35px;
+    padding: 5px;
+  }
+  .contact__textArea {
+    width: 230px;
+    height: 100px;
+    padding: 5px;
+  }
+  .contact__contactOptions {
+    height: 70vh;
+  }
+}
+@media (orientation: landscape) and(min-width: 1024px) {
+  .contact {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contact__innerHeader {
+    margin: 5px;
+    font-size: 2rem;
+  }
+  .contact__contactOptions,
+  .contact__form {
+    width: 45vw;
+    height: 60vh;
+    padding: 30px;
+  }
+  .contact__contactOption {
+    font-size: 1.4rem;
+  }
+  .contact__companyName {
+    font-size: 1.8rem;
+  }
+}
+@media (orientation: landscape) and(min-width: 1280px) {
+  .contact__contactOptions,
+  .contact__form {
+    width: 45vw;
+    height: 60vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 850px;
+    max-height: 740px;
+  }
+  .contact__formField {
+    &:nth-last-of-type(1) {
+      label {
+        margin-left: 20px;
+      }
+    }
+  }
+  .contact__input {
+    width: 250px;
+  }
+  .contact__textArea {
+    width: 500px;
+    height: 200px;
+    margin: 0 20px;
+  }
+  .contact__file {
+    display: flex;
+    position: relative;
+
+    label {
+      background-color: #e08702;
+      margin-top: 31px;
+      width: 250px;
+      height: 35px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-family: $Montserrat;
+      font-weight: 300;
+    }
+    [type="file"] {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+@media (orientation: landscape) and(min-width: 1400px) {
+  .contact__textArea {
+    width: 550px;
+    margin: 0 20px;
+  }
+  .contact__file {
+    label {
+      margin-top: 32px;
+    }
+  }
+}
+@media (orientation: landscape) and(min-width: 1600px) {
+  .contact__textArea {
+    min-width: 600px;
+    max-width: 746px;
+  }
+  .contact__companyName {
+    font-size: 2.2rem;
+  }
+  .contact__contactOption {
+    font-size: 2rem;
+    i {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .contact__input {
+    min-width: 300px;
+    max-width: 354px;
+    height: 44px;
+  }
+  .contact__file {
+    label {
+      margin-top: 36px;
+      width: 300px;
+      height: 44px;
+    }
+  }
+}
+@media (orientation: landscape) and(min-width: 1900px) {
+  .contact__textArea {
+    width: 746px;
+    height: 194px;
+  }
+  .contact__companyName {
+    font-size: 2.2rem;
+  }
+
+  .contact__input {
+    width: 354px;
+  }
+  .contact__file {
+    label {
+      width: 354px;
+    }
+  }
 }
