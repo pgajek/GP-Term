@@ -1,0 +1,94 @@
+.references {
+  z-index: 2;
+  height: 350px;
+  width: 98vw;
+  margin: 0 auto 50px auto;
+}
+.references__slider {
+  grid-area: slider;
+  display: grid;
+  grid-template-areas: " arrowLeft wrapper arrowRight";
+  grid-template-columns: 25px 1fr 25px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.references__sliderWrapper {
+  grid-area: wrapper;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.references__sliderArrow {
+  width: 0;
+  height: 0;
+  position: relative;
+  align-self: center;
+  border: none;
+  background-color: transparent;
+  &--arrowLeft {
+    grid-area: arrowLeft;
+    border-top: 24px solid transparent;
+    border-right: 24px solid #424240;
+    border-bottom: 24px solid transparent;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      transform: translateY(-50%);
+      border-top: 16px solid transparent;
+      border-right: 16px solid $mainDarkBg;
+      border-bottom: 16px solid transparent;
+    }
+    transform: translateX(10px);
+  }
+  &--arrowRight {
+    grid-area: arrowRight;
+    border-top: 24px solid transparent;
+    border-left: 24px solid #424240;
+    border-bottom: 24px solid transparent;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -24px;
+      transform: translateY(-50%);
+      border-top: 16px solid transparent;
+      border-left: 16px solid $mainDarkBg;
+      border-bottom: 16px solid transparent;
+    }
+    transform: translateX(-10px);
+  }
+}
+.references__sliderItem {
+  position: absolute;
+  width: 113px;
+  height: 162px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  &--active {
+    opacity: 1;
+  }
+  &--left {
+    opacity: 0;
+    transform: translate(-100vw, -50%);
+  }
+  &--right {
+    opacity: 0;
+    transform: translate(100vw, -50%);
+  }
+  transition: ease 1s;
+}
+.references__sliderImage {
+  width: 100%;
+  height: 100%;
+}

@@ -16,7 +16,7 @@ body {
   padding-bottom: 100px;
   &::before {
     z-index: 1;
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     border: 2px solid $mainOrange;
