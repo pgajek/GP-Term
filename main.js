@@ -129,18 +129,21 @@ class Slider {
     this.changeSlide(this.currentSlide);
     this.slideActiveClass = activeClass;
     this.previousSlideClass = previousClass;
+    this.secondActiveClass = null;
     this.nextSlideClass = nextClass;
   }
   changeSlide(slideIndex) {
     this.slides.forEach((slide) => {
       slide.classList.remove("references__sliderItem--active");
       slide.classList.remove("references__sliderItem--left");
+      slide.classList.remove("references__sliderItem--secondActive");
       slide.classList.remove("references__sliderItem--right");
       slide.classList.remove("references__sliderItem--behind");
       slide.setAttribute("aria-hidden", true);
     });
 
-    let nextSlideIndex = slideIndex + 1;
+    let nextSlideIndex = slideIndex + 2;
+    let secondActiveSlideIndex = slideIndex + 1;
     let prevSlideIndex = slideIndex - 1;
     if (slideIndex == 0) {
       prevSlideIndex = this.slides.length - 1;
@@ -159,8 +162,12 @@ class Slider {
 
     this.slides[nextSlideIndex].classList.add("references__sliderItem--right");
     this.slides[prevSlideIndex].classList.add("references__sliderItem--left");
+    this.slides[slideIndex + 1].classList.add(
+      "references__sliderItem--secondActive"
+    );
     this.slides[slideIndex].classList.add("references__sliderItem--active");
     this.slides[slideIndex].setAttribute("aria-hidden", false);
+    this.slides[slideIndex + 1].setAttribute("aria-hidden", false);
     this.currentSlide = slideIndex;
   }
   nextSlide() {
