@@ -151,15 +151,21 @@ class Slider {
       secondActiveSlideIndex = 0;
       nextSlideIndex = 1;
     }
-    if (secondActiveSlideIndex == this.slides.length - 1) {
+    if (secondActiveSlideIndex == this.slides.length) {
       secondActiveSlideIndex = 0;
+      nextSlideIndex = 1;
     }
     if (nextSlideIndex == this.slides.length) {
       nextSlideIndex = 0;
     }
+    // if (prevSlideIndex == 0) {
+    //   prevSlideIndex == this.slides.length;
+    // }
 
     console.log(`active ${slideIndex}, second ${secondActiveSlideIndex}`);
     console.log(`next ${nextSlideIndex}`);
+    console.log(`prev ${prevSlideIndex}`);
+
     this.slides[nextSlideIndex].classList.add("references__sliderItem--right");
     this.slides[prevSlideIndex].classList.add("references__sliderItem--left");
     this.slides[secondActiveSlideIndex].classList.add(
