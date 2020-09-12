@@ -1,8 +1,11 @@
 .references {
   z-index: 2;
-  height: 350px;
+  height: 300px;
   width: 98vw;
-  margin: 0 auto 50px auto;
+  margin: 40px auto 50px auto;
+}
+.references__header {
+  margin-bottom: 20px;
 }
 .references__slider {
   grid-area: slider;
@@ -31,7 +34,7 @@
   &--arrowLeft {
     grid-area: arrowLeft;
     border-top: 24px solid transparent;
-    border-right: 24px solid #424240;
+    border-right: 24px solid #e6d1a2;
     border-bottom: 24px solid transparent;
 
     &::after {
@@ -50,7 +53,7 @@
   &--arrowRight {
     grid-area: arrowRight;
     border-top: 24px solid transparent;
-    border-left: 24px solid #424240;
+    border-left: 24px solid #e6d1a2;
     border-bottom: 24px solid transparent;
     &::after {
       content: "";

@@ -7,13 +7,17 @@
 }
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 body {
+  position: relative;
   font-size: 1.6rem;
   background-color: $mainDarkBg;
   position: relative;
   min-height: 100vh;
   padding-bottom: 100px;
+  width: 100%;
+  overflow-x: hidden;
   &::before {
     z-index: 1;
     content: "";
@@ -29,6 +33,9 @@ body {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+  }
+  & > * {
+    max-width: 100%;
   }
 }
 .main {
