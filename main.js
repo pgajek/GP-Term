@@ -217,3 +217,38 @@ class Slider {
 }
 
 const ReferenceSlider = new Slider(".references__slider", true);
+
+/////////////////
+////GRID SCRIPT
+
+const squares = document.querySelectorAll(".outside");
+const wrapper = document.querySelector(".container");
+const show = document.querySelector(".show");
+
+function setUpGrid(e) {
+  let str = "";
+
+  if (window.innerHeight > window.innerWidth) {
+    for (let i = 0; i < squares.length; i++) {
+      str += `. p${i + 1}`;
+      if (i === squares.length - 1 && str.length % 5 > 0) {
+        str += " .";
+      }
+    }
+  } else {
+    for (let i = 0; i < squares.length; i++) {
+      str += `. p${i + 1} `;
+      if (i === squares.length - 1 && str.length % 9 > 0) {
+        str += " .";
+      }
+    }
+  }
+  show.textContent = str;
+}
+
+function initiateGrid(e) {
+  setUpGrid(e);
+}
+
+setUpGrid();
+window.addEventListener("resize", (e) => initiateGrid(e));
