@@ -1,42 +1,51 @@
 .realizations {
-  padding-top: 30px;
+  min-height: 100vh;
+  width: 98vw;
+  z-index: 2;
+  margin: 0 auto;
+}
+.realizations__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: $wrapperWidth;
+  padding: 50px 0;
 }
 .realizations__header {
 }
-.realizations__wrapper {
-  width: 195px;
-  min-height: 195px;
-  margin: 20px auto 100px auto;
 
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-}
 .realizations__realization {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #707070;
-  background-color: $mainOrange;
-  width: 95px;
-  height: 95px;
-  color: #ffe39f;
-  font-family: $Lato;
-  text-align: center;
-  //   margin: 0 21px;
-  &:nth-child(1) {
-    margin: 0 20px;
+  width: $realizationBoxWidth;
+  height: $realizationBoxHeight;
+  position: relative;
+  margin: 0 $verticalMargin;
+  &:nth-of-type(1),
+  &:nth-of-type(4) {
+    margin: 0 $lonelyMargin;
   }
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
 }
 .realizations__insideWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: $realizationA;
+  height: $realizationA;
+  background-color: #ff9900;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+}
+.realizations__textWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -44,17 +53,16 @@
   -o-transform: rotate(-45deg);
 }
 .realizations__readMore {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  color: #ffe39f;
 }
 .realizations__realizationName {
-  font-size: 0.9rem;
-  font-weight: 400;
 }
 .realizations__realizationPlace {
-  font-weight: 300;
-  font-size: 0.8rem;
+}
+.realizations__displayMore {
+}
+@media (orienatation: landscape) {
+  $wrapperWidth: 500px;
+  .realizations__wrapper {
+    width: $wrapperWidth;
+  }
 }
