@@ -221,29 +221,43 @@ const ReferenceSlider = new Slider(".references__slider", true);
 /////////////////
 ////GRID SCRIPT
 
-const squares = document.querySelectorAll(".outside");
-const wrapper = document.querySelector(".container");
-const show = document.querySelector(".show");
+const squares = document.querySelectorAll(".realizations__realization");
+const wrapper = document.querySelector(".realizations__wrapper");
 
 function setUpGrid(e) {
-  let str = "";
+  let str = " .";
 
   if (window.innerHeight > window.innerWidth) {
     for (let i = 0; i < squares.length; i++) {
-      str += `. p${i + 1}`;
+      str += ` ${i + 1} .`;
       if (i === squares.length - 1 && str.length % 5 > 0) {
         str += " .";
       }
     }
+    let gridAreas = "";
+
+    while (str.length > 0) {
+      let newLine = str.substr(0, 6).trim();
+
+      for (let i = 0; i < newLine.length; i++) {
+        let digit = newLine[i];
+        // if (digit != "." && digit != " ") {
+        //   newLine = newLine.replace(digit, `${digit}a`);
+        // }
+      }
+      gridAreas = `${gridAreas} '${newLine}'`;
+      str = str.replace(str.substr(0, 6), "");
+    }
+
+    wrapper.style.gridTemplateAreas = `${gridAreas}`;
   } else {
     for (let i = 0; i < squares.length; i++) {
-      str += `. p${i + 1} `;
+      str += `. ${i + 1} `;
       if (i === squares.length - 1 && str.length % 9 > 0) {
         str += " .";
       }
     }
   }
-  show.textContent = str;
 }
 
 function initiateGrid(e) {
@@ -251,4 +265,9 @@ function initiateGrid(e) {
 }
 
 setUpGrid();
+// for (let i = 0; i < squares.length; i++) {
+//   squares[i].style.gridArea = i + 1;
+//   console.log(squares[i].style.gridArea);
+// }
 window.addEventListener("resize", (e) => initiateGrid(e));
+//https://stackoverflow.com/questions/54498784/how-to-assign-grid-area-property-from-javascript

@@ -4,14 +4,3 @@ $mainOrange: rgb(255, 153, 0);
 $Lato: 'Lato', sans-serif;
 $Montserrat: 'Montserrat', sans-serif;
 $Oswald: 'Oswald', sans-serif;
-
-$wrapperWidth: 310px;
-$realizationBoxWidth: 0.25 * $wrapperWidth;
-$realizationBoxHeight: 0.27 * $wrapperWidth;
-$verticalMargin: 0.11 * $wrapperWidth;
-$realizationA: 0.32 * $wrapperWidth;
-$lonelyMargin: 0.32 * $wrapperWidth;
-
-@media (orienatation: landscape) {
-  $wrapperWidth: 500px;
-}
