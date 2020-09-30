@@ -230,7 +230,12 @@ function setUpGrid() {
   if (window.innerHeight > window.innerWidth) {
     for (let i = 0; i < squares.length; i++) {
       str += ` ${i + 1} .`;
-      if (i === squares.length - 1 && str.length % 5 > 0) {
+
+      while (
+        i === squares.length - 1 &&
+        str.length % 5 > 0 &&
+        str.length !== 5
+      ) {
         str += ' .';
       }
     }
@@ -252,33 +257,38 @@ function setUpGrid() {
       gridAreas = `${gridAreas} '${newLine}'`;
       str = str.replace(str.substr(0, 6), '');
     }
-
+    console.log(gridAreas);
     wrapper.style.gridTemplateAreas = `${gridAreas}`;
   } else {
     for (let i = 0; i < squares.length; i++) {
       str += ` ${i + 1} .`;
-      let gridAreas = '';
-      if (i === squares.length - 1 && str.length % 11 > 0) {
+      while (
+        i === squares.length - 1 &&
+        str.length % 5 > 0 &&
+        str.length !== 5
+      ) {
         str += ' .';
       }
-      while (str.length > 0) {
-        let line = str.substr(0, 11).trim();
-        console.log(line);
-        let newLine = '';
-        for (let i = 0; i < line.length; i++) {
-          let digit = line[i];
-
-          if (digit != '.' && digit != ' ') {
-            newLine += `a${digit}`;
-          } else {
-            newLine += digit;
-          }
-        }
-        gridAreas = `${gridAreas} '${newLine}'`;
-
-        str = str.replace(str.substr(0, 11), '');
-      }
     }
+    let gridAreas = '';
+
+    while (str.length > 0) {
+      let line = str.substr(0, 10).trim();
+      let newLine = '';
+      for (let i = 0; i < line.length; i++) {
+        let digit = line[i];
+
+        if (digit != '.' && digit != ' ') {
+          newLine += `a${digit}`;
+        } else {
+          newLine += digit;
+        }
+      }
+
+      gridAreas = `${gridAreas} '${newLine}'`;
+      str = str.replace(str.substr(0, 10), '');
+    }
+    console.log(gridAreas);
     wrapper.style.gridTemplateAreas = `${gridAreas}`;
   }
 }

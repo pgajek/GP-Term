@@ -6,8 +6,8 @@
 }
 .realizations__wrapper {
   display: grid;
-  grid-template-columns: 80px 80px 80px;
-  grid-template-rows: 80px 80px 80px 80px 80px;
+  grid-template-columns: repeat(auto-fill, 80px);
+  grid-template-rows: repeat(auto-fill, 80px);
   align-content: center;
   justify-content: center;
   margin: 0 auto;
