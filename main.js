@@ -257,7 +257,7 @@ function setUpGrid() {
       gridAreas = `${gridAreas} '${newLine}'`;
       str = str.replace(str.substr(0, 6), '');
     }
-    console.log(gridAreas);
+
     wrapper.style.gridTemplateAreas = `${gridAreas}`;
   } else {
     for (let i = 0; i < squares.length; i++) {
@@ -288,7 +288,7 @@ function setUpGrid() {
       gridAreas = `${gridAreas} '${newLine}'`;
       str = str.replace(str.substr(0, 10), '');
     }
-    console.log(gridAreas);
+
     wrapper.style.gridTemplateAreas = `${gridAreas}`;
   }
 }
