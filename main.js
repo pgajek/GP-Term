@@ -230,7 +230,12 @@ function setUpGrid() {
   if (window.innerHeight > window.innerWidth) {
     for (let i = 0; i < squares.length; i++) {
       str += ` ${i + 1} .`;
-      if (i === squares.length - 1 && str.length % 5 > 0) {
+
+      while (
+        i === squares.length - 1 &&
+        str.length % 5 > 0 &&
+        str.length !== 5
+      ) {
         str += " .";
       }
     }
@@ -257,7 +262,11 @@ function setUpGrid() {
   } else {
     for (let i = 0; i < squares.length; i++) {
       str += ` ${i + 1} .`;
-      if (i === squares.length - 1 && str.length % 11 > 0) {
+      while (
+        i === squares.length - 1 &&
+        str.length % 5 > 0 &&
+        str.length !== 5
+      ) {
         str += " .";
       }
     }
@@ -279,11 +288,11 @@ function setUpGrid() {
       gridAreas = `${gridAreas} '${newLine}'`;
       str = str.replace(str.substr(0, 10), "");
     }
-    console.log(gridAreas);
 
     wrapper.style.gridTemplateAreas = `${gridAreas}`;
   }
 }
+
 function initiateGrid() {
   setUpGrid();
   for (let i = 0; i < squares.length; i++) {

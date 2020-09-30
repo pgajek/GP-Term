@@ -6,8 +6,8 @@
 }
 .realizations__wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: 80px 80px 80px;
+  grid-template-rows: repeat(auto-fill, 80px);
   align-content: center;
   justify-content: center;
   margin: 0 auto;
@@ -60,4 +60,10 @@
 .realizations__realizationPlace {
 }
 .realizations__displayMore {
+}
+
+@media (orientation: landscape) {
+  .realizations__wrapper {
+    grid-template-columns: 80px 80px 80px 80px 80px;
+  }
 }
