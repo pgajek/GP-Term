@@ -1,3 +1,12 @@
+@keyframes shine {
+  0% {
+    transform: skewX(-30deg) translateX(-150%);
+  }
+  100% {
+    transform: skewX(-30deg) translateX(250%);
+  }
+}
+
 .realizations {
   min-height: 100vh;
   width: 98vw;
@@ -21,6 +30,7 @@
   position: relative;
   width: 80px;
   height: 80px;
+
   @for $i from 1 to 20 {
     &--#{$i} {
       grid-area: a#{$i};
@@ -34,12 +44,36 @@
   transform: translate(-50%, -50%) rotate(45deg);
   width: 100px;
   height: 100px;
-  background-color: #ff9900;
+  background-color: $mainOrange;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
   -moz-transform: translate(-50%, -50%) rotate(45deg);
   -ms-transform: translate(-50%, -50%) rotate(45deg);
   -o-transform: translate(-50%, -50%) rotate(45deg);
+  overflow: hidden;
+  border: 1px solid $mainOrange;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-30deg) translateX(-150%);
+  }
+  &--shine {
+    &:before {
+      animation: 0.75s shine;
+    }
+  }
+  &:hover {
+    transition: 1s;
+    box-shadow: 0px 0px 45px 0px rgba(255, 153, 0, 0.65);
+  }
 }
+
 .realizations__textWrapper {
   width: 100%;
   height: 100%;

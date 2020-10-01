@@ -303,3 +303,15 @@ function initiateGrid() {
 initiateGrid();
 
 window.addEventListener("resize", initiateGrid);
+
+const shineElements = document.querySelectorAll(".realizations__insideWrapper");
+
+setInterval(() => {
+  shineElements.forEach((item) =>
+    item.classList.remove("realizations__insideWrapper--shine")
+  );
+  const shine = [...shineElements][
+    Math.floor(Math.random() * shineElements.length)
+  ];
+  shine.classList.add("realizations__insideWrapper--shine");
+}, 2500);
