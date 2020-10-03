@@ -1,10 +1,13 @@
 .header {
   width: 100vw;
   height: 35vh;
-  background-image: url('../assets/images/GPTERM_Header-Background-Small.png');
+  background-image: url("../assets/images/GPTERM_Header-Background-Small.png");
   background-repeat: no-repeat;
   position: relative;
   background-size: 100% 100%;
+  & > * {
+    z-index: 2;
+  }
 }
 .header__btn {
   border: 1px solid $mainOrange;
@@ -15,6 +18,7 @@
   padding: 15px 20px;
   color: #f1e8d1;
   text-decoration: none;
+  cursor: pointer;
 }
 .header__readMoreBtn {
   display: none;
@@ -86,7 +90,7 @@
     font-size: 2.6rem;
     margin-right: 1.5vw;
     &::after {
-      content: '';
+      content: "";
       display: block;
 
       background-color: $mainOrange;
@@ -147,7 +151,7 @@
 }
 @media (orientation: landscape) and (min-width: 1024px) {
   .header {
-    background-image: url('../assets/images/GPTERM_Header-Background-Big.png');
+    background-image: url("../assets/images/GPTERM_Header-Background-Big.png");
   }
   .header__mainHeader {
     width: 60%;
