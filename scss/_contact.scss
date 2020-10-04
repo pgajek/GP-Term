@@ -202,6 +202,9 @@
 }
 // MEDIA LANDSCAPE
 @media (orientation: landscape) {
+  .contact {
+    padding: 20px;
+  }
   .contact__innerHeader {
     margin-left: 15vw;
   }

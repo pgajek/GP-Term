@@ -25,7 +25,7 @@
   background-color: $mainDarkBg;
   border-bottom: 2px solid $mainOrange;
   &:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 100%;
@@ -209,7 +209,7 @@
     margin: 0 auto;
     font-size: 1.6rem;
     letter-spacing: 0.9px;
-    line-height: 20px;
+    line-height: 2rem;
     opacity: 0;
     &--onTop {
       opacity: 1;
@@ -219,5 +219,25 @@
     -moz-transition: 0.2s opacity linear;
     -ms-transition: 0.2s opacity linear;
     -o-transition: 0.2s opacity linear;
+  }
+}
+@media (orientation: landscape) and (min-width: 1280px) {
+  .aboutUs__text {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+@media (orientation: landscape) and (min-width: 1280px) {
+  .aboutUs__text {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    width: 65%;
+  }
+}
+@media (orientation: landscape) and (min-width: 1600px) {
+  .aboutUs__text {
+    font-size: 2.6rem;
+    line-height: 3rem;
+    width: 65%;
   }
 }
