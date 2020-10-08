@@ -54,6 +54,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  cursor: pointer;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -150,7 +151,7 @@
   font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 0;
-
+  cursor: pointer;
   background-color: transparent;
   border: none;
   color: #ef7d00;
