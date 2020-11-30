@@ -166,6 +166,9 @@
   .header__btn {
     font-size: 1.6rem;
   }
+  .header__btn:hover {
+    filter: brightness(140%);
+  }
   .header__contactBtn {
     display: none;
   }
