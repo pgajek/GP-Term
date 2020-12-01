@@ -1,5 +1,5 @@
-function setUpGrid(squares, wrapper) {
-  let str = ' .';
+export function setUpGrid(squares, wrapper) {
+  let str = " .";
 
   if (window.innerHeight > window.innerWidth) {
     for (let i = 0; i < squares.length; i++) {
@@ -10,18 +10,18 @@ function setUpGrid(squares, wrapper) {
         str.length % 5 > 0 &&
         str.length !== 5
       ) {
-        str += ' .';
+        str += " .";
       }
     }
-    let gridAreas = '';
+    let gridAreas = "";
 
     while (str.length > 0) {
       let line = str.substr(0, 6).trim();
-      let newLine = '';
+      let newLine = "";
       for (let i = 0; i < line.length; i++) {
         let digit = line[i];
 
-        if (digit != '.' && digit != ' ') {
+        if (digit != "." && digit != " ") {
           newLine += `a${digit}`;
         } else {
           newLine += digit;
@@ -29,7 +29,7 @@ function setUpGrid(squares, wrapper) {
       }
 
       gridAreas = `${gridAreas} '${newLine}'`;
-      str = str.replace(str.substr(0, 6), '');
+      str = str.replace(str.substr(0, 6), "");
     }
 
     wrapper.style.gridTemplateAreas = `${gridAreas}`;
@@ -41,18 +41,18 @@ function setUpGrid(squares, wrapper) {
         str.length % 5 > 0 &&
         str.length !== 5
       ) {
-        str += ' .';
+        str += " .";
       }
     }
-    let gridAreas = '';
+    let gridAreas = "";
 
     while (str.length > 0) {
       let line = str.substr(0, 10).trim();
-      let newLine = '';
+      let newLine = "";
       for (let i = 0; i < line.length; i++) {
         let digit = line[i];
 
-        if (digit != '.' && digit != ' ') {
+        if (digit != "." && digit != " ") {
           newLine += `a${digit}`;
         } else {
           newLine += digit;
@@ -60,14 +60,14 @@ function setUpGrid(squares, wrapper) {
       }
 
       gridAreas = `${gridAreas} '${newLine}'`;
-      str = str.replace(str.substr(0, 10), '');
+      str = str.replace(str.substr(0, 10), "");
     }
 
     wrapper.style.gridTemplateAreas = `${gridAreas}`;
   }
 }
 
-export default function initiateGrid(squares, wrapper) {
+export function initiateGrid(squares, wrapper) {
   setUpGrid(squares, wrapper);
   for (let i = 0; i < squares.length; i++) {
     squares[i].classList.add(`realizations__realization--${i + 1}`);

@@ -1,4 +1,4 @@
-import initiateGrid from "./grid.js";
+import { initiateGrid } from "./grid.js";
 import { HandleBurgerClick, HandleLinkClick } from "./nav.js";
 import {
   handleOfferChange,
@@ -9,7 +9,7 @@ import Slider from "./slider.js";
 
 const burger = document.querySelector(".navigation__hamburgerBtn");
 const squares = document.querySelectorAll(".realizations__realization");
-const wrapper = document.querySelector(".realizations__wrapper");
+const realizationWrapper = document.querySelector(".realizations__wrapper");
 const shineElements = document.querySelectorAll(".realizations__insideWrapper");
 const readMore = document.querySelectorAll(".offer__readMoreBtn");
 const innerWrappers = document.querySelectorAll(".offer__innerWrapper");
@@ -26,10 +26,12 @@ setInterval(() => {
   shine.classList.add("realizations__insideWrapper--shine");
 }, 2500);
 
-initiateGrid(squares, wrapper);
-window.addEventListener("resize", (squares, wrapper) =>
-  initiateGrid(squares, wrapper)
-);
+window.addEventListener("resize", () => {
+  const wrapper = document.querySelector(".realizations__wrapper");
+  const fields = document.querySelectorAll(".realizations__realization");
+  initiateGrid(fields, wrapper);
+});
+initiateGrid(squares, realizationWrapper);
 
 burger.addEventListener("click", (burger) => HandleBurgerClick(burger));
 navLinks.forEach((link) => link.addEventListener("click", HandleLinkClick));
